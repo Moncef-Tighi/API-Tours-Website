@@ -4,7 +4,8 @@ const {isLoggedIn, logout, protect} = require("../controllers/authenticationCont
 const bookingController = require("../controllers/bookingController");
 
 const router = express.Router();
-
+//On a besoin de booking controller ici mais c'est temporaire, la solution n'est PAS sécurisé.
+//C'est juste qu'il faut un vrai site web pour créer une solution sécuriser avec Stripe
 router.get("/",bookingController.createBookingCheckout,isLoggedIn, getOverview);
 
 router.get("/tour/:tour", isLoggedIn,getTour);
