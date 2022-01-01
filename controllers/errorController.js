@@ -43,7 +43,7 @@ const sendErrorDev = function(error, request, response){
     
 }
 
-const sendErrorProd = function(error, response){
+const sendErrorProd = function(error,request, response){
     if (request.originalUrl.startsWith("/api")){
         return response.status(error.statusCode).json({
             status : error.status,
