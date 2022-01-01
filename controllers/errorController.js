@@ -31,7 +31,6 @@ const sendErrorDev = function(error, request, response){
             })
         //programming ou erreure inconnue  
         } else {
-            console.error("Error ! " , error);
             return response.status(500).json({
                 status : "error",
                 message : "Something went wrong"

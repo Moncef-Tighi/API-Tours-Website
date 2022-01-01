@@ -18,6 +18,7 @@ const xss = require("xss-clean");
 const hpp = require("hpp");
 
 const cookieParser = require("cookie-parser");
+const compression = require("compression");
 
 const app = express();
 
@@ -79,7 +80,9 @@ app.use((req, res, next) => {
     res.setHeader(CSP, POLICY);
     next();
 });
-
+ 
+//Ne fonctionne que sur le texte qu'on envoie, mais c'est toujours ça de gagné.
+app.use(compression());
 
 
 // ROUTAGE
