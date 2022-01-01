@@ -4,7 +4,8 @@
   "main": "serveur.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "debug": "ndb server.js"
   },
   "author": "",
@@ -35,5 +36,8 @@
   },
   "devDependencies": {
     "ndb": "^1.1.5"
+  },
+  "engines": {
+    "node": ">=10.0.0"
   }
 }

@@ -8,7 +8,7 @@ mongoose.connect(db, {
     useNewUrlParser : true
 }).then(()=> console.log("Connected successfully to the DataBase"));
 
-
-app.listen(process.env.PORT, ()=> {
-    console.log(`server is running on ${process.env.PORT} `);
+const port = process.env.PORT
+app.listen(port, ()=> {
+    console.log(`server is running on ${port} `);
 })
