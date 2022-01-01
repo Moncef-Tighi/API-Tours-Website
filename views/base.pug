@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        block head
+            meta(charset='UTF-8' )
+            meta(name='viewport' content='width=device-width, initial-scale=1.0')   
+            title Natours | #{title || 'Exciting tours for adventurous people'}
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='image/png' href='/img/favicon.png')
+            link(href='https://fonts.googleapis.com/css?family=Lato:300,300i,700' rel='stylesheet')
+            script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js' defer)
+            script(src='/javascript/login.js' defer)
+
+    body
+        include _header
+
+        block content
+    
+        include _footer
